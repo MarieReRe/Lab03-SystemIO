@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03-SystemIO", "Lab03-SystemIO\Lab03-SystemIO.csproj", "{91AF915C-ACD5-449C-BFA7-96BE804417C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemIO-Tests", "SystemIO-Tests\SystemIO-Tests.csproj", "{5EF8EF21-C1F8-4902-B6C8-AB1CC652AD12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{91AF915C-ACD5-449C-BFA7-96BE804417C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91AF915C-ACD5-449C-BFA7-96BE804417C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91AF915C-ACD5-449C-BFA7-96BE804417C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF8EF21-C1F8-4902-B6C8-AB1CC652AD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF8EF21-C1F8-4902-B6C8-AB1CC652AD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF8EF21-C1F8-4902-B6C8-AB1CC652AD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF8EF21-C1F8-4902-B6C8-AB1CC652AD12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
