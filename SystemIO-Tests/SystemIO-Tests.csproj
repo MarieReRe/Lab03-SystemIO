@@ -17,4 +17,20 @@
   <ItemGroup>
     <ProjectReference Include="..\Lab03-SystemIO\Lab03-SystemIO.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\TeaInventory.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\TeaInventory.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\TeaInventory.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

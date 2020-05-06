@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using Xunit;
 
 
@@ -6,17 +7,18 @@ namespace Lab03_SystemIO
 {
     public class SystemTests
     {
-        [Fact]
-        public void GetListTest()
-        {
-            // Arrange
-            string[] inputList = new[] { "black tea" };
+        [Theory]
 
+        //Arrange
+        [InlineData("Assets/TeaInventory.txt")]
+
+        public void FileExistsTest(string path)
+        {
             // Act
-            string[] resultList = Program.GetList(inputList);
+            bool exists = File.Exists(path);
 
             //Assert
-            Assert.Equal(inputList, resultList);
+            Assert.True(exists);
         }
     }
 }
