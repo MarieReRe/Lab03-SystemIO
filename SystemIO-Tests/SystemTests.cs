@@ -32,6 +32,7 @@ namespace Lab03_SystemIO
 
             // Assert
             Assert.NotEmpty(inventory);
+        
         }
 
         [Fact]
