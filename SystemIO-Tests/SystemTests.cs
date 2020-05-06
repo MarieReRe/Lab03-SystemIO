@@ -20,5 +20,18 @@ namespace Lab03_SystemIO
             //Assert
             Assert.True(exists);
         }
+
+        [Fact]
+        public void ReadInventoryTest()
+        {
+            // Arrange
+            string path = "Assets/TeaInventory.txt";
+
+            // Act
+            string inventory = File.ReadAllText(path);
+
+            // Assert
+            Assert.NotEmpty(inventory);
+        }
     }
 }
