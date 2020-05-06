@@ -33,5 +33,18 @@ namespace Lab03_SystemIO
             // Assert
             Assert.NotEmpty(inventory);
         }
+
+        [Fact]
+        public void CanReadIneventoryLinesTest()
+        {
+            // Arrange
+            string path = "Assets/TeaInventory.txt";
+
+            // Act
+            string[] items = File.ReadAllLines(path);
+
+            // Assert
+            Assert.Equal(new[] { "Black Tea", "Green Tea", "Chamomile Tea" }, items);
+        }
     }
 }
