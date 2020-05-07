@@ -6,4 +6,14 @@
     <RootNamespace>Lab03_SystemIO</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Assets\TeaInventory.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\TeaInventory.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

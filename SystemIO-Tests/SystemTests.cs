@@ -32,6 +32,7 @@ namespace Lab03_SystemIO
 
             // Assert
             Assert.NotEmpty(inventory);
+        
         }
 
         [Fact]
@@ -44,7 +45,23 @@ namespace Lab03_SystemIO
             string[] items = File.ReadAllLines(path);
 
             // Assert
-            Assert.Equal(new[] { "Black Tea", "Green Tea", "Chamomile Tea" }, items);
+            Assert.Contains( "Black Tea", items);
+        }
+        [Fact]
+        public void AddToInventoryTest()
+        {
+            //Arrage
+            string path = "Assets/TeaInventory.txt";
+            string[] newTea = new[] {"Rose Hibiscus" };
+
+            //Act
+            File.AppendAllLines(path, newTea);
+
+            // Assert
+            Assert.True(File.Exists(path));
+            Assert.Contains("Rose Hibiscus", File.ReadAllLines(path));
+
+
         }
     }
 }
