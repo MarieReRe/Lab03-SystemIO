@@ -7,13 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\TeaInventory.txt" />
+    <Folder Include="Assets\" />
   </ItemGroup>
-
   <ItemGroup>
-    <EmbeddedResource Include="Assets\TeaInventory.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <None Remove="Assets\GetList_TeaInventory.txt" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Update="Assets\TeaInventory.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
