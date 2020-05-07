@@ -42,6 +42,9 @@
     <None Update="Assets\ReadInventory_TeaInventory.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Assets\RemoveFromInventory_TeaInventory.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Assets\GetList_TeaInventory.txt">

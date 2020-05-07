@@ -85,5 +85,35 @@ namespace Lab03_SystemIO
             }
 
         }
+
+        public static void RemoveTea(string path, string teaToRemove)
+        {
+            string[] existingLines = File.ReadAllLines(path);
+
+            string[] result = RemoveItemFromArray(existingLines, teaToRemove);
+
+            File.WriteAllLines(path, result);
+        }
+
+        public static string[] RemoveItemFromArray(string[] array, string teaToRemove)
+        {
+            int valueCount = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == teaToRemove)
+                {
+                    valueCount++;
+                }
+            }
+            string[] result = new string[array.Length - valueCount];
+            for (int i = 0, j = 0; i < array.Length; i++)
+            {
+                if (array[i] != teaToRemove)
+                {
+                    result[j++] = array[i];
+                }
+            }
+            return array;
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace Lab03_SystemIO
 
             // Assert
             Assert.NotEmpty(inventory);
-        
+
         }
 
         [Fact]
@@ -45,14 +45,14 @@ namespace Lab03_SystemIO
             string[] items = File.ReadAllLines(path);
 
             // Assert
-            Assert.Contains( "Black Tea", items);
+            Assert.Contains("Black Tea", items);
         }
         [Fact]
         public void AddToInventoryTest()
         {
             //Arrage
             string path = "Assets/AddToInventory_TeaInventory.txt";
-            string[] newTea = new[] {"Rose Hibiscus" };
+            string[] newTea = new[] { "Rose Hibiscus" };
 
             //Act
             File.AppendAllLines(path, newTea);
@@ -62,6 +62,33 @@ namespace Lab03_SystemIO
             Assert.Contains("Rose Hibiscus", File.ReadAllLines(path));
 
 
+        }
+
+        [Fact]
+        public void RemoveFromInventoryTest()
+        {
+            // Arrange
+            string path = "Assets/RemoveFromInventory_TeaInventory.txt";
+      
+
+            // Act
+            Program.RemoveTea(path, "Tea3");
+
+            // Assert
+            Assert.Equal(new[] { "Tea1", "Tea2" }, File.ReadAllLines(path));
+        }
+
+        [Theory]
+        [InlineData(new[] { "Tea1", "Tea2" }, "Tea1", new[] { "Tea2" })]
+
+        public void RemoveFromArrayTest(string[] array, string value, string[] expected)
+        {
+            // Act
+            string[] result = Program.RemoveItemFromArray(array, value);
+
+            //Assert
+            Assert.Equal(expected, result);
+            Assert.NotSame(array, result);
         }
     }
 }
