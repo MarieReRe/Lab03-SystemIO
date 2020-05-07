@@ -9,23 +9,25 @@ namespace Lab03_SystemIO
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to your tea cabinet!");
-            GetList();
+            string teaList = GetList("Assets/TeaInventory.txt");
+            Console.WriteLine(teaList);
         }
 
 
-        public static void GetList()
+        public static string GetList(string path)
         {
 
             try
             {
-                string path = @"Assets/TeaInventory.txt";
+                //path = @"Assets/GetList_TeaInventory.txt";
                 string teaList = File.ReadAllText(path);
-                Console.WriteLine(teaList);
+                return teaList;
             }
             catch (DirectoryNotFoundException dnf)
             {
 
                 Console.WriteLine("Sorry, file not found {0}", dnf.Message);
+                return " ";
             }
             /*public static void TeaControls()
             {

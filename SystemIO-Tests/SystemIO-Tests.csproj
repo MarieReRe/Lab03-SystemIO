@@ -29,7 +29,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Assets\TeaInventory.txt">
+    <EmbeddedResource Include="Assets\GetList_TeaInventory.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

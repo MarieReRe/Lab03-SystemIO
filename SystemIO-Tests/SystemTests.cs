@@ -10,7 +10,7 @@ namespace Lab03_SystemIO
         [Theory]
 
         //Arrange
-        [InlineData("Assets/TeaInventory.txt")]
+        [InlineData("Assets/FileExists_TeaInventory.txt")]
 
         public void FileExistsTest(string path)
         {
@@ -25,7 +25,7 @@ namespace Lab03_SystemIO
         public void ReadInventoryTest()
         {
             // Arrange
-            string path = "Assets/TeaInventory.txt";
+            string path = "Assets/ReadInventory_TeaInventory.txt";
 
             // Act
             string inventory = File.ReadAllText(path);
@@ -39,7 +39,7 @@ namespace Lab03_SystemIO
         public void CanReadIneventoryLinesTest()
         {
             // Arrange
-            string path = "Assets/TeaInventory.txt";
+            string path = "Assets/CanReadInventory_TeaInventory.txt";
 
             // Act
             string[] items = File.ReadAllLines(path);
@@ -51,7 +51,7 @@ namespace Lab03_SystemIO
         public void AddToInventoryTest()
         {
             //Arrage
-            string path = "Assets/TeaInventory.txt";
+            string path = "Assets/AddToInventory_TeaInventory.txt";
             string[] newTea = new[] {"Rose Hibiscus" };
 
             //Act
